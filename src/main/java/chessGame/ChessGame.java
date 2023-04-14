@@ -1,7 +1,13 @@
 package chessGame;
 
-public class Main {
+public class ChessGame {
+    private static Board board;
+
+    public ChessGame() {
+        board = Board.getInstance();
+    }
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ChessGame game = new ChessGame();
+
     }
 }
