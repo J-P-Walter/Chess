@@ -21,7 +21,7 @@ public abstract class Piece {
         this.currCol = startCol;
     }
 
-    protected abstract void getMoves();
+    protected abstract int[][] getMoves();
 
     public void move(int newRow, int newCol){
         currRow = newRow;

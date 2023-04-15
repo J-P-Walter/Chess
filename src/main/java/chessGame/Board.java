@@ -8,7 +8,7 @@ public class Board {
     private static Board instance = null;
 
     private char[][] board;
-    private Piece[] pieces = new Piece[32];
+    public Piece[] pieces = new Piece[32];
 
 
     private Board(){
@@ -87,6 +87,7 @@ public class Board {
 
     public void resetBoard(){
         board = new char[8][8];
+        pieces = new Piece[32];
     }
 
     public void placePieces(){
