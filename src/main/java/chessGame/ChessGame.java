@@ -8,6 +8,6 @@ public class ChessGame {
     }
     public static void main(String[] args) {
         ChessGame game = new ChessGame();
-
+        board.initialize();
     }
 }

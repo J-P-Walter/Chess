@@ -27,12 +27,14 @@ public class BoardTest {
     @Test
     @DisplayName("Testing singleton, @BeforeEach resets board for every test")
     void singletonTest1(){
-        board.getBoard()[0][0] = "a";
-        Assertions.assertEquals("a", board.getBoard()[0][0]);
+        board.getBoard()[0][0] = 'a';
+        Assertions.assertEquals('a', board.getBoard()[0][0]);
     }
     @Test
     @DisplayName("Testing singleton, @BeforeEach resets board for every test")
     void singletonTest2(){
-        Assertions.assertEquals(null, board.getBoard()[0][0]);
+        Assertions.assertEquals(0, board.getBoard()[0][0]);
     }
+
+
 }
