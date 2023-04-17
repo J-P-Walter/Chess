@@ -4,10 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.io.FileNotFoundException;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
 
 class PawnTest {
     private static Board board = Board.getInstance();
@@ -18,37 +16,123 @@ class PawnTest {
     }
 
     @Test
-    @DisplayName("Testing moving forward")
-    void moveForward(){
-        Pawn whitePawn = new Pawn('P', 'W', 5, 4, 6, 4);
-        Pawn blackPawn = new Pawn('P', 'B', 3, 3, 3, 3);
+    @DisplayName("Testing moving forward, not first move, unimpeded")
+    void move_forward_once_unimpeded(){
+        Pawn whitePawn = new Pawn('P', 'W', 6, 4, 5, 4);
+        Pawn blackPawn = new Pawn('P', 'B', 1, 3, 3, 3);
         board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
         board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
+        board.printBoard();
+        System.out.println("\n");
 
+        ArrayList<ArrayList<Integer>> whiteMoves = new ArrayList<>();
+        whiteMoves.add(new ArrayList<>() {
+            {
+                add(4);
+                add(4);
+            }
+        });
 
-//        board.placePieces();
-//        board.printBoard();
-        int[][] whiteMoves = new int[1][2];
-        whiteMoves[0][0] = 4;
-        whiteMoves[0][1] = 4;
+        ArrayList<ArrayList<Integer>> blackMoves = new ArrayList<>();
+        blackMoves.add(new ArrayList<>() {
+            {
+                add(4);
+                add(3);
+            }
+        });
 
-        int[][] blackMoves = new int[1][2];
-        blackMoves[0][0] = 4;
-        blackMoves[0][1] = 3;
-
-        Assertions.assertArrayEquals(whiteMoves, whitePawn.getMoves());
-        Assertions.assertArrayEquals(blackMoves, blackPawn.getMoves());
-
-
+        Assertions.assertEquals(whiteMoves.get(0), whitePawn.getMoves().get(0));
+        Assertions.assertEquals(blackMoves.get(0), blackPawn.getMoves().get(0));
     }
 
     @Test
-    @DisplayName("Testing first move two squares")
-    void moveTwo(){}
+    @DisplayName("Testing blocked moving forward")
+    void move_forward_impeded(){
+        Pawn whitePawn = new Pawn('P', 'W', 6, 4, 5, 4);
+        Pawn blackPawn = new Pawn('P', 'B', 2, 4, 4, 4);
+        board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
+        board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
+        board.printBoard();
+        System.out.println("\n");
+
+        Assertions.assertTrue(whitePawn.getMoves().isEmpty());
+        Assertions.assertTrue(blackPawn.getMoves().isEmpty());
+    }
 
     @Test
-    @DisplayName("Testing attacking")
-    void attack(){}
+    @DisplayName("Testing first move forward two squares, unimpeded")
+    void moveTwo(){
+        Pawn whitePawn = new Pawn('P', 'W', 6, 6, 6, 6);
+        Pawn blackPawn = new Pawn('P', 'B', 1, 2, 1, 2);
+
+        Assertions.assertEquals(2, whitePawn.getMoves().size());
+        Assertions.assertTrue(whitePawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(5);
+                add(6);
+            }
+        }));
+        Assertions.assertTrue(whitePawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(4);
+                add(6);
+            }
+        }));
+
+        Assertions.assertEquals(2, blackPawn.getMoves().size());
+        Assertions.assertTrue(blackPawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(2);
+                add(2);
+            }
+        }));
+        Assertions.assertTrue(blackPawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(3);
+                add(2);
+            }
+        }));
+    }
+
+    @Test
+    @DisplayName("Testing attacking left and right for pawns")
+    void attack(){
+        Pawn whitePawn = new Pawn('P', 'W', 6, 5, 5, 5);
+        Pawn blackPawn = new Pawn('P', 'B', 2, 4, 4, 4);
+        board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
+        board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
+        board.printBoard();
+        System.out.println("\n");
+
+
+        Assertions.assertEquals(2, whitePawn.getMoves().size());
+        Assertions.assertTrue(whitePawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(4);
+                add(4);
+            }
+        }));
+        Assertions.assertTrue(whitePawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(4);
+                add(5);
+            }
+        }));
+
+        Assertions.assertEquals(2, blackPawn.getMoves().size());
+        Assertions.assertTrue(blackPawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(5);
+                add(5);
+            }
+        }));
+        Assertions.assertTrue(blackPawn.getMoves().contains(new ArrayList<Integer>() {
+            {
+                add(5);
+                add(4);
+            }
+        }));
+    }
 
     @Test
     @DisplayName("Testing En passant")

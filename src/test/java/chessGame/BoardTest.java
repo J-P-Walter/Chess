@@ -16,27 +16,27 @@ public class BoardTest {
     }
 
     @Test
-    void testInstance(){
+    void test_instance(){
         Assertions.assertNotNull(board);
     }
     @Test
     @DisplayName("Testing Board Dimensions")
-    void testDimensions(){
+    void test_dimensions(){
         Assertions.assertEquals(8, board.getBoard().length);
         Assertions.assertEquals(8, board.getBoard()[0].length);
     }
 
     @Test
     @DisplayName("Testing singleton, @BeforeEach resets board for every test")
-    void singletonTest1(){
+    void singleton_test_part_1(){
         King k = new King('K', 'W', 0, 0, 0, 0);
         board.getBoard()[0][0] = k;
         Assertions.assertEquals('K', board.getBoard()[0][0].getName());
     }
     @Test
     @DisplayName("Testing singleton, @BeforeEach resets board for every test")
-    void singletonTest2(){
-        Assertions.assertEquals(0, board.getBoard()[0][0]);
+    void singleton_test_part_2(){
+        Assertions.assertEquals(null, board.getBoard()[0][0]);
     }
 
 

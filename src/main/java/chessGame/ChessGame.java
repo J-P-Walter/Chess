@@ -1,7 +1,7 @@
 package chessGame;
 
 public class ChessGame {
-    private static Board board;
+    static Board board;
 
     public ChessGame() {
         board = Board.getInstance();

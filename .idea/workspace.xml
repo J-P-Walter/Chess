@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8bfac1c5-4233-4e96-a2ff-e14a43b7c5ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Bishop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/ChessGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/ChessGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/BoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/PieceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/PieceTest.java" afterDir="false" />
@@ -63,6 +71,34 @@
       <recent name="chessGame" />
       <recent name="org.example" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tests in 'Chess.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'Chess.test'" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

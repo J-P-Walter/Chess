@@ -6,9 +6,7 @@ import java.util.Scanner;
 
 public class Board {
     private static Board instance = null;
-
     private Piece[][] board;
-
 
     private Board(){
         board = new Piece[8][8];
@@ -82,9 +80,8 @@ public class Board {
 
     public void resetBoard() throws FileNotFoundException {
         board = new Piece[8][8];
-        setup();
+//        setup();
     }
-
 
     public void printBoard(){
         for (Piece[] row : board){

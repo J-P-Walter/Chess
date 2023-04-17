@@ -15,8 +15,6 @@ class PieceTest {
         board.resetBoard();
     }
 
-    @Test
-    void test(){
-        board.printBoard();
-    }
+
+
 }

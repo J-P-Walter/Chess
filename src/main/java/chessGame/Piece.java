@@ -1,6 +1,7 @@
 package chessGame;
 
 import java.awt.Color;
+import java.util.ArrayList;
 
 public abstract class Piece {
     protected char name;
@@ -17,11 +18,11 @@ public abstract class Piece {
         }
         this.startRow = startRow;
         this.startCol = startCol;
-        this.currRow = startRow;
-        this.currCol = startCol;
+        this.currRow = currRow;
+        this.currCol = currCol;
     }
 
-    protected abstract int[][] getMoves();
+    protected abstract ArrayList<ArrayList<Integer>> getMoves();
 
     public void move(int newRow, int newCol){
         currRow = newRow;
@@ -37,4 +38,5 @@ public abstract class Piece {
     public char getName(){
         return name;
     }
+    public Color getColor() { return color; }
 }
