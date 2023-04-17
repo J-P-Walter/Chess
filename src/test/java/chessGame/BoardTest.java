@@ -5,11 +5,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
+
 public class BoardTest {
     private static Board board = Board.getInstance();
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws FileNotFoundException {
         board.resetBoard();
     }
 
@@ -27,8 +29,9 @@ public class BoardTest {
     @Test
     @DisplayName("Testing singleton, @BeforeEach resets board for every test")
     void singletonTest1(){
-        board.getBoard()[0][0] = 'a';
-        Assertions.assertEquals('a', board.getBoard()[0][0]);
+        King k = new King('K', 'W', 0, 0, 0, 0);
+        board.getBoard()[0][0] = k;
+        Assertions.assertEquals('K', board.getBoard()[0][0].getName());
     }
     @Test
     @DisplayName("Testing singleton, @BeforeEach resets board for every test")

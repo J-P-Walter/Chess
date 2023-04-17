@@ -5,13 +5,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PawnTest {
     private static Board board = Board.getInstance();
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws FileNotFoundException {
         board.resetBoard();
     }
 
@@ -20,8 +22,8 @@ class PawnTest {
     void moveForward(){
         Pawn whitePawn = new Pawn('P', 'W', 5, 4, 6, 4);
         Pawn blackPawn = new Pawn('P', 'B', 3, 3, 3, 3);
-        board.pieces[0] = whitePawn;
-        board.pieces[1] = blackPawn;
+        board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
+        board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
 
 
 //        board.placePieces();
