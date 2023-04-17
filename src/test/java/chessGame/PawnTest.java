@@ -17,13 +17,13 @@ class PawnTest {
 
     @Test
     @DisplayName("Testing moving forward, not first move, unimpeded")
-    void move_forward_once_unimpeded(){
+    void pawn_move_forward_once_unimpeded(){
         Pawn whitePawn = new Pawn('P', 'W', 6, 4, 5, 4);
         Pawn blackPawn = new Pawn('P', 'B', 1, 3, 3, 3);
         board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
         board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
-        board.printBoard();
-        System.out.println("\n");
+//        board.printBoard();
+//        System.out.println("\n");
 
         ArrayList<ArrayList<Integer>> whiteMoves = new ArrayList<>();
         whiteMoves.add(new ArrayList<>() {
@@ -47,13 +47,13 @@ class PawnTest {
 
     @Test
     @DisplayName("Testing blocked moving forward")
-    void move_forward_impeded(){
+    void pawn_move_forward_impeded(){
         Pawn whitePawn = new Pawn('P', 'W', 6, 4, 5, 4);
         Pawn blackPawn = new Pawn('P', 'B', 2, 4, 4, 4);
         board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
         board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
-        board.printBoard();
-        System.out.println("\n");
+//        board.printBoard();
+//        System.out.println("\n");
 
         Assertions.assertTrue(whitePawn.getMoves().isEmpty());
         Assertions.assertTrue(blackPawn.getMoves().isEmpty());
@@ -61,7 +61,7 @@ class PawnTest {
 
     @Test
     @DisplayName("Testing first move forward two squares, unimpeded")
-    void moveTwo(){
+    void pawn_move_two(){
         Pawn whitePawn = new Pawn('P', 'W', 6, 6, 6, 6);
         Pawn blackPawn = new Pawn('P', 'B', 1, 2, 1, 2);
 
@@ -96,14 +96,13 @@ class PawnTest {
 
     @Test
     @DisplayName("Testing attacking left and right for pawns")
-    void attack(){
+    void pawn_take(){
         Pawn whitePawn = new Pawn('P', 'W', 6, 5, 5, 5);
         Pawn blackPawn = new Pawn('P', 'B', 2, 4, 4, 4);
         board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
         board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
-        board.printBoard();
-        System.out.println("\n");
-
+//        board.printBoard();
+//        System.out.println("\n");
 
         Assertions.assertEquals(2, whitePawn.getMoves().size());
         Assertions.assertTrue(whitePawn.getMoves().contains(new ArrayList<Integer>() {
@@ -136,9 +135,9 @@ class PawnTest {
 
     @Test
     @DisplayName("Testing En passant")
-    void enPassant(){}
+    void pawn_enPassant(){}
 
     @Test
     @DisplayName("Testing promotion")
-    void promotion(){}
+    void pawn_promotion(){}
 }

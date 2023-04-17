@@ -15,8 +15,8 @@ public class Pawn extends Piece {
         //5 Cases for pawn movement: move forward 1, move forward 2, attack diagonally, en passant, promotion
         //Probably won't handle promotion here tho
         Board board = Board.getInstance();
-
         ArrayList<ArrayList<Integer>> moves = new ArrayList<>();
+
         int direction;
         if (color == Color.WHITE) {
             direction = -1;
