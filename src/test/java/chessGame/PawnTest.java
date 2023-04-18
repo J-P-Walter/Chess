@@ -1,9 +1,7 @@
 package chessGame;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -13,6 +11,11 @@ class PawnTest {
     @BeforeEach
     void setUp() throws FileNotFoundException {
         board.resetBoard();
+    }
+    @AfterEach
+    void printBoard(){
+        board.printBoard();
+        System.out.println("\n");
     }
 
     @Test
@@ -64,6 +67,11 @@ class PawnTest {
     void pawn_move_two(){
         Pawn whitePawn = new Pawn('P', 'W', 6, 6, 6, 6);
         Pawn blackPawn = new Pawn('P', 'B', 1, 2, 1, 2);
+        Pawn whiteBlockerPawn = new Pawn('P', 'W', 6, 5, 3, 2);
+        board.getBoard()[whitePawn.getCurrRow()][whitePawn.getCurrCol()] = whitePawn;
+        board.getBoard()[blackPawn.getCurrRow()][blackPawn.getCurrCol()] = blackPawn;
+        board.getBoard()[whiteBlockerPawn.getCurrRow()][whiteBlockerPawn.getCurrCol()] = whiteBlockerPawn;
+
 
         Assertions.assertEquals(2, whitePawn.getMoves().size());
         Assertions.assertTrue(whitePawn.getMoves().contains(new ArrayList<Integer>() {
@@ -79,16 +87,10 @@ class PawnTest {
             }
         }));
 
-        Assertions.assertEquals(2, blackPawn.getMoves().size());
+        Assertions.assertEquals(1, blackPawn.getMoves().size());
         Assertions.assertTrue(blackPawn.getMoves().contains(new ArrayList<Integer>() {
             {
                 add(2);
-                add(2);
-            }
-        }));
-        Assertions.assertTrue(blackPawn.getMoves().contains(new ArrayList<Integer>() {
-            {
-                add(3);
                 add(2);
             }
         }));
@@ -133,11 +135,11 @@ class PawnTest {
         }));
     }
 
-    @Test
-    @DisplayName("Testing En passant")
-    void pawn_enPassant(){}
-
-    @Test
-    @DisplayName("Testing promotion")
-    void pawn_promotion(){}
+//    @Test
+//    @DisplayName("Testing En passant")
+//    void pawn_enPassant(){}
+//
+//    @Test
+//    @DisplayName("Testing promotion")
+//    void pawn_promotion(){}
 }

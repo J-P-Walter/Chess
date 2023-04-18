@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfac1c5-4233-4e96-a2ff-e14a43b7c5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/chessGame/BishopTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Bishop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +66,52 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="BishopTest.bishop_center_test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;chessGame.BishopTest.bishop_center_test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BishopTest.bishop_edge_test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;chessGame.BishopTest.bishop_edge_test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests in 'Chess.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -89,6 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BishopTest.bishop_edge_test" />
+        <item itemvalue="Gradle.BishopTest.bishop_center_test" />
         <item itemvalue="Gradle.Tests in 'Chess.test'" />
       </list>
     </recent_temporary>

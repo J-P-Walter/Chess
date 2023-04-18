@@ -1,9 +1,6 @@
 package chessGame;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -16,6 +13,11 @@ class RookTest {
     @BeforeEach
     void setUp() throws FileNotFoundException {
         board.resetBoard();
+    }
+    @AfterEach
+    void printBoard(){
+        board.printBoard();
+        System.out.println("\n");
     }
 
     @Test
