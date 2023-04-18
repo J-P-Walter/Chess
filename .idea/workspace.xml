@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfac1c5-4233-4e96-a2ff-e14a43b7c5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/chessGame/BishopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/chessGame/KingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/chessGame/KnightTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/chessGame/QueenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Queen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Tests in 'Chess.test'">
     <configuration name="BishopTest.bishop_center_test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -135,9 +135,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BishopTest.bishop_edge_test" />
-        <item itemvalue="Gradle.BishopTest.bishop_center_test" />
         <item itemvalue="Gradle.Tests in 'Chess.test'" />
+        <item itemvalue="Gradle.BishopTest.bishop_center_test" />
+        <item itemvalue="Gradle.BishopTest.bishop_edge_test" />
       </list>
     </recent_temporary>
   </component>
