@@ -5,7 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class BoardTest {
     private static Board board = Board.getInstance();
@@ -38,6 +40,5 @@ public class BoardTest {
     void singleton_test_part_2(){
         Assertions.assertEquals(null, board.getBoard()[0][0]);
     }
-
 
 }

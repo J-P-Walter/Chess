@@ -2,6 +2,7 @@ package chessGame;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Board {
@@ -144,6 +145,7 @@ public class Board {
             System.out.println();
         }
     }
+
 
 }
 
