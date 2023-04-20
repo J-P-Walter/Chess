@@ -13,11 +13,11 @@ class QueenTest {
     void setUp() throws FileNotFoundException {
         board.resetBoard();
     }
-    @AfterEach
-    void printBoard(){
-        board.printBoard();
-        System.out.println("\n");
-    }
+//    @AfterEach
+//    void printBoard(){
+//        board.printBoard();
+//        System.out.println("\n");
+//    }
 
     @Test
     @DisplayName("Center of board")

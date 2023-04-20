@@ -41,4 +41,19 @@ public class BoardTest {
         Assertions.assertEquals(null, board.getBoard()[0][0]);
     }
 
+    @Test
+    @DisplayName("Get all valid moves")
+    void valid_moves_test(){
+        board.initialize();
+        ArrayList<ArrayList<Integer>> validMoves = board.getValidMoves(Color.WHITE);
+        Assertions.assertEquals(20, validMoves.size());
+    }
+
+    @Test
+    @DisplayName("Simple Check")
+    void check_test(){
+        King k = new King('K', 'W', 0, 0, 0, 0);
+        board.getBoard()[0][0] = k;
+
+    }
 }

@@ -12,11 +12,11 @@ class PawnTest {
     void setUp() throws FileNotFoundException {
         board.resetBoard();
     }
-    @AfterEach
-    void printBoard(){
-        board.printBoard();
-        System.out.println("\n");
-    }
+//    @AfterEach
+//    void printBoard(){
+//        board.printBoard();
+//        System.out.println("\n");
+//    }
 
     @Test
     @DisplayName("Testing moving forward, not first move, unimpeded")

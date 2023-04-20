@@ -1,5 +1,6 @@
 package chessGame;
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class Board {
             System.err.println("Error: file not found");
             e.printStackTrace();
         }
-        printBoard();
+//        printBoard();
     }
 
     private void setup() throws FileNotFoundException {
@@ -147,5 +148,29 @@ public class Board {
     }
 
 
+    public ArrayList<ArrayList<Integer>> getValidMoves(Color color) {
+        ArrayList<ArrayList<Integer>> validMoves = new ArrayList<>();
+
+        for (Piece[] row : board){
+            for (Piece piece : row){
+                if (piece != null && piece.getColor() == color){
+                    ArrayList<ArrayList<Integer>> possMoves = piece.getMoves();
+
+                    for (ArrayList<Integer> move : possMoves){
+                        Piece[][] testBoard = board;
+                        move(piece.startRow, piece.startCol, move.get(0), move.get(1), testBoard);
+
+                    }
+                }
+            }
+        }
+        return validMoves;
+    }
+
+    public void move(int startRow, int startCol, int endRow, int endCol, Piece[][] board){
+        Piece p = board[startRow][startCol];
+        board[endRow][endCol] = p;
+        board[startRow][startCol] = null;
+    }
 }
 

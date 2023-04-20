@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfac1c5-4233-4e96-a2ff-e14a43b7c5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chessGame/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/ChessGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/ChessGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chessGame/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/BishopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/BishopTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/KingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/KingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/KnightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/KnightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/PawnTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/QueenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/QueenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chessGame/RookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +28,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,7 +82,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Tests in 'Chess.test'">
     <configuration name="BishopTest.bishop_center_test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

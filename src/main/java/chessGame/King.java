@@ -10,6 +10,7 @@ public class King extends Piece{
     @Override
     protected ArrayList<ArrayList<Integer>> getMoves() {
         //King can move 8 directions, cardinal and diagonal
+        //TODO: implement castle
         Board board = Board.getInstance();
         ArrayList<ArrayList<Integer>> moves = new ArrayList<>();
 

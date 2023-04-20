@@ -11,6 +11,8 @@ public class Rook extends Piece{
     protected ArrayList<ArrayList<Integer>> getMoves() {
         //Four cases for rook movement, up, down, left, and right
         //Simply iterate over, stopping when reaching the edge of the board or another piece of either team
+        //TODO: implement castle
+
         Board board = Board.getInstance();
         ArrayList<ArrayList<Integer>> moves = new ArrayList<>();
 
